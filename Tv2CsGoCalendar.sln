@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tv2CsGoCalendar", "Tv2CsGoCalendar\Tv2CsGoCalendar.csproj", "{269B8CE3-8319-4CC0-930D-2D5FE8B36301}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ical.Net", "Ical.Net\Ical.Net.csproj", "{A6F2BDCB-FBBD-4311-9D45-F1B2CB80D85A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{269B8CE3-8319-4CC0-930D-2D5FE8B36301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269B8CE3-8319-4CC0-930D-2D5FE8B36301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269B8CE3-8319-4CC0-930D-2D5FE8B36301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269B8CE3-8319-4CC0-930D-2D5FE8B36301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F2BDCB-FBBD-4311-9D45-F1B2CB80D85A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F2BDCB-FBBD-4311-9D45-F1B2CB80D85A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F2BDCB-FBBD-4311-9D45-F1B2CB80D85A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F2BDCB-FBBD-4311-9D45-F1B2CB80D85A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DAED034-A4AC-4C2E-A0D7-CCCD1A6458C1}
+	EndGlobalSection
+EndGlobal

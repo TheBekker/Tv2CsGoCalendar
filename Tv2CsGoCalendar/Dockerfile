@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Tv2CsGoCalendar/Tv2CsGoCalendar.csproj", "Tv2CsGoCalendar/"]
+COPY ["./Tv2CsGoCalendar/Tv2CsGoCalendar.csproj", "Tv2CsGoCalendar/"]
 RUN dotnet restore "Tv2CsGoCalendar/Tv2CsGoCalendar.csproj"
 COPY . .
 WORKDIR "/src/Tv2CsGoCalendar"

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ical.Net;
 using Ical.Net.Serialization;
 using Tv2CsGoCalendar.Services;
 
@@ -23,12 +24,12 @@ namespace Tv2CsGoCalendar.Controllers
         }
 
         [HttpGet]
-        public async Task<string> Get()
+        [Produces("text/calendar")]
+        public async Task<Calendar> Get()
         {
             var calendar = await _scraper.ScrapeAndBuildCalendar();
-            var serializer = new CalendarSerializer();
-            var serializedCalendar = serializer.SerializeToString(calendar);
-            return serializedCalendar;
+
+            return calendar;
         }
     }
 }

@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tv2CsGoCalendar.Formatters;
 using Tv2CsGoCalendar.Services;
 
 namespace Tv2CsGoCalendar
@@ -24,11 +25,15 @@ namespace Tv2CsGoCalendar
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.OutputFormatters.Insert(0, new CalendarFormatter());
+            });
+
+            services.AddMemoryCache();
 
             services.AddScoped<Tv2CsGoCalendarScraper>();
             services.AddSwaggerGen(c =>
@@ -37,7 +42,6 @@ namespace Tv2CsGoCalendar
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -46,8 +50,8 @@ namespace Tv2CsGoCalendar
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tv2CsGoCalendar v1"));
             }
-
-            app.UseHttpsRedirection();
+            
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
